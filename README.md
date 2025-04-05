@@ -1,4 +1,12 @@
+# Deployed on Heroku
+
 # AI Image Stylization API
+
+## 🚀 Live Demo
+
+The application is deployed and available at: [https://test-task-image-ai-api-feafc1a34de6.herokuapp.com/](https://test-task-image-ai-api-feafc1a34de6.herokuapp.com/)
+
+> **Примітка:** A detailed description of how to work with the API can be found below in the “API Endpoints” section
 
 This project provides an API for stylizing images using AI. It uses Firebase for storage and database, and Replicate for AI image processing. The application follows the Onion Architecture pattern for clean separation of concerns.
 
