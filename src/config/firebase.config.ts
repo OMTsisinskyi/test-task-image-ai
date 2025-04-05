@@ -6,7 +6,13 @@ if (!process.env.STORAGE_BUCKET) {
     throw new Error('STORAGE_BUCKET environment variable is not set');
 }
 
-const serviceAccount = require(path.join(__dirname, '../../firebase-adminsdk'));
+const serviceAccountBuffer = Buffer.from(
+    process.env.FIREBASE_ADMIN_SDK_BASE64  || '',
+    'base64'
+  );
+
+// const serviceAccount = require(path.join(__dirname, '../../firebase-adminsdk'));
+const serviceAccount = JSON.parse(serviceAccountBuffer.toString('utf8'));
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
