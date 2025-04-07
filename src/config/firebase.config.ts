@@ -11,8 +11,8 @@ const serviceAccountBuffer = Buffer.from(
     'base64'
   );
 
-const serviceAccount = require(path.join(__dirname, '../../firebase-adminsdk'));
-// const serviceAccount = JSON.parse(serviceAccountBuffer.toString('utf8'));
+// const serviceAccount = require(path.join(__dirname, '../../firebase-adminsdk'));
+const serviceAccount = JSON.parse(serviceAccountBuffer.toString('utf8'));
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
